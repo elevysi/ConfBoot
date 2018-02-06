@@ -10,33 +10,32 @@
 
 
 ####################################
-#server:
-#  port: 8888
-#spring:
-#  cloud:
-#    config:
-#      server:
-#        encrypt.enabled: false
-#        git:
-#         uri: https://github.com/carnellj/config-repo/
-#         searchPaths: licensingservice,organizationservice
-#          username: native-cloud-apps
-#          password: 0ffended
-
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        encrypt.enabled: false
+        git:
+         uri: https://github.com/elevysi/BootConfFiles
+         searchPaths: shopservice,socialservice
+         username: elevysi
+         password: navigator@github1
 
 ####
 #Classpath and file-based solution
 ####
 
-server:
-   port: 8888
-spring:
-  profiles:
-    active: native
-  cloud:
-     config:
-       server:
-           native:
-              searchLocations: file:/Users/starstories/Documents/Projects/ConfBoot/src/main/resources/config/shopservice,
-                               file:/Users/starstories/Documents/Projects/ConfBoot/src/main/resources/config/socialservice
+#server:
+#   port: 8888
+#spring:
+#  profiles:
+#    active: native
+#  cloud:
+#     config:
+#       server:
+#           native:
+#              searchLocations: file:/Users/starstories/Documents/Projects/ConfBoot/src/main/resources/config/shopservice,
+#                               file:/Users/starstories/Documents/Projects/ConfBoot/src/main/resources/config/socialservice
 ##              #searchLocations: classpath:config/,classpath:config/licensingservice
